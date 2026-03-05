@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="read_books.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <title>Books We've Read - Chill Book Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chewy" />
+</head>
+<body>
+    <header class='hero'> 
+        <div class="topbar">
+            <a href="index.html" class="logo-link"><img src="images/logo.jpg" alt="Chill Book Club Logo" class="logo"></a>
+            <div class='searchbox'>
+                <input type="search" placeholder="Search...">
+                <button type="submit"> <img src="images/search.png" alt="Search" height="14" width="14"> </button>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+                <svg width="40" height="30" viewBox="0 0 60 30" aria-hidden="true">
+                    <rect x="5" y="3" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="13" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="23" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                </svg>
+            </div>
+        </div>
+        <h1>Books We've Read</h1>
+    </header>
+
+    <div class="content">
+        <div class="gallery-flex">
+            <div class="book-item" data-title="Tomorrow, and Tomorrow, and Tomorrow" data-author="by Gabrielle Zevin" data-info="Feb 2025 &middot; Rating: 8.5">
+                <img src="images/books/tomorrow.jpg" alt="Tomorrow, and Tomorrow, and Tomorrow">
+            </div>
+            <div class="book-item" data-title="Brotherless Night" data-author="by V.V.Ganeshanathan" data-info="March 2025 &middot; Rating: 9">
+                <img src="images/books/brotherless_night.jpg" alt="Brotherless Night">
+            </div>
+            <div class="book-item" data-title="A Psalm for the Wild-Built" data-author="by Becky Chambers" data-info="April 2025 &middot; Rating: 9.5">
+                <img src="images/books/monk_and_robot.jpg" alt="A Psalm for the Wild-Built">
+            </div>
+            <div class="book-item" data-title="Intermezzo" data-author="by Sally Rooney" data-info="May 2025 &middot; Rating: 5">
+                <img src="images/books/intermezzo.jpg" alt="Intermezzo">
+            </div>
+            <div class="book-item" data-title="Crying in H Mart" data-author="by Michelle Zauner" data-info="Summer 2025 &middot; Rating: 6.33">
+                <img src="images/books/crying_in_h_mart.jpg" alt="Crying in H Mart">
+            </div>
+            <div class="book-item" data-title="Still Born" data-author="by Guadelupe Nettel" data-info="September 2025 &middot; Rating: 8">
+                <img src="images/books/still_born.jpg" alt="Still Born">
+            </div>
+            <div class="book-item" data-title="Vera Wong's Unsolicited Advice for Murderers" data-author="by Jesse Q.Sutanto" data-info="Sept 2025 &middot; Rating: _">
+                <img src="images/books/vera_wong.jpg" alt="Vera Wong's Unsolicited Advice for Murderers">
+            </div>
+            <div class="book-item" data-title="Stolen" data-author="by Ann-Helén Laestadius" data-info="Jan 2026 &middot; Rating: 7">
+                <img src="images/books/stolen.jpeg" alt="Stolen">
+            </div>
+            <div class="book-item" data-title="Things We Lost in the Fire" data-author="by Mariana Enriquez" data-info="Dec 2026 &middot; Rating: _">
+                <img src="images/books/things_we_lost.jpg" alt="Things We Lost in the Fire">
+            </div>
+            <div class="book-item" data-title="Our Lady of the Nile" data-author="by Scholastique Mukasonga" data-info="Feb 2026 &middot; Rating: _">
+                <img src="images/books/our_lady_of_the_nile.jpg" alt="Our Lady of the Nile">
+            </div>
+            <div class="book-item" data-title="Project Hail Mary" data-author="by Andy Weir" data-info="Mar 2026 &middot; Rating: _">
+                <img src="images/books/hail_mary.jpeg" alt="Project Hail Mary">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> Website developed by: Perova Anna, the Chill Book Club host </p>
+        <p> All rights reserved. </p>
+    </footer>
+
+    <!-- Socials Button -->
+    <button class="socials-toggle-btn" id="socialsToggleBtn">👋 Our Socials</button>
+
+    <!-- Socials Modal -->
+    <div class="socials-modal" id="socialsModal">
+        <button class="socials-modal-close" id="socialsModalClose">✕</button>
+        <h2> Our socials </h2>
+        <div class="row social" align="center">
+            <a  href= "https://chat.whatsapp.com/LfcwpVG3Og2DVkN3QR7uVb"> <img src="images/whatsapp.png" alt="WhatsApp" width="15" height="15"></a>
+            <a  href= "https://bookclubs.com/modern-literati/about-our-club"> <img src="images/bookclubs.png" alt="BookClubs" width="15" height="15"></a>
+            <a  href= 'mailto:mail.chillbookclub@gmail.com'> <img src="images/email.png" alt="Email" width="15" height="15"></a>
+        </div>
+    </div>
+
+    <!-- Book Info Modal -->
+    <div class="book-modal" id="bookModal">
+        <div class="book-modal-content">
+            <button class="book-modal-close" id="bookModalClose">✕</button>
+            <h2 id="bookTitle"></h2>
+            <p id="bookInfo"></p>
+        </div>
+    </div>
+
+    <!-- Sidebar + overlay -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <nav>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="message_board.html">Announcements</a></li>
+                <li><a href="book_themes.html">Book Themes Schedule</a></li>
+                <li><a href="gallery.html">Past Meetings</a></li>
+                <li><a href="read_books.html">Read Books</a></li>
+                <li><a href="polls.html">Polls</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="overlay" class="overlay" hidden></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('bookModal');
+            const modalTitle = document.getElementById('bookTitle');
+            const modalInfo = document.getElementById('bookInfo');
+            const closeBtn = document.getElementById('bookModalClose');
+
+            document.querySelectorAll('.book-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const title = this.getAttribute('data-title');
+                    const author = this.getAttribute('data-author');
+                    const info = this.getAttribute('data-info');
+                    modalTitle.textContent = `${title}${author}`;
+                    modalInfo.textContent = info;
+                    modal.classList.add('active');
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

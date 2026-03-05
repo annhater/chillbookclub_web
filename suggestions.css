@@ -1,0 +1,332 @@
+/* Suggestions Box Page Styles - Book Club Theme */
+
+.suggestions-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background: transparent;
+}
+
+.suggestions-intro {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #fac4a7;
+}
+
+.suggestions-intro h2 {
+  color: #2a0a5e;
+  font-size: clamp(24px, 5vw, 32px);
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.suggestions-intro p {
+  color: #555;
+  font-size: clamp(14px, 2vw, 16px);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Suggestions Sections */
+.suggestions-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(42, 10, 94, 0.08);
+  border-left: 4px solid #e87341;
+}
+
+.suggestions-section:nth-child(odd) {
+  border-left-color: #2a0a5e;
+}
+
+.section-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(232, 115, 65, 0.3);
+}
+
+.section-header h3 {
+  color: #2a0a5e;
+  font-size: clamp(18px, 3vw, 24px);
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.section-header p {
+  color: #666;
+  font-size: clamp(13px, 1.8vw, 15px);
+  margin: 0;
+}
+
+/* Suggestion Form */
+.suggestion-form-wrapper {
+  background: linear-gradient(135deg, rgba(250, 196, 167, 0.1) 0%, rgba(252, 233, 219, 0.3) 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #fac4a7;
+  margin-bottom: 30px;
+}
+
+.suggestion-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2a0a5e;
+  margin-bottom: 8px;
+  font-size: clamp(13px, 1.8vw, 15px);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1.5px solid #e87341;
+  border-radius: 8px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: clamp(13px, 1.8vw, 15px);
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2a0a5e;
+  box-shadow: 0 0 0 3px rgba(42, 10, 94, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-size: 14px;
+}
+
+.char-count {
+  font-size: 12px;
+  color: #999;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #2a0a5e 0%, #6a2d9e 100%);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(13px, 1.8vw, 15px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(42, 10, 94, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(42, 10, 94, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Suggestions Display */
+.suggestions-display {
+  margin-top: 30px;
+}
+
+.suggestions-display h4 {
+  color: #2a0a5e;
+  font-size: clamp(16px, 2.5vw, 20px);
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e87341;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.suggestion-item {
+  background: linear-gradient(135deg, rgba(250, 196, 167, 0.2) 0%, rgba(252, 233, 219, 0.4) 100%);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #e87341;
+  transition: all 0.3s ease;
+}
+
+.suggestion-item:hover {
+  box-shadow: 0 4px 12px rgba(232, 115, 65, 0.2);
+  transform: translateX(4px);
+}
+
+.suggestion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.suggestion-title {
+  font-weight: 700;
+  color: #2a0a5e;
+  font-size: clamp(13px, 1.8vw, 15px);
+  flex: 1;
+  min-width: 150px;
+}
+
+.suggestion-author {
+  color: #999;
+  font-size: 12px;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.suggestion-text {
+  color: #555;
+  font-size: clamp(12px, 1.6vw, 14px);
+  line-height: 1.6;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .suggestions-container {
+    margin: 20px auto;
+    padding: 20px 15px;
+  }
+
+  .suggestions-intro {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .suggestions-intro h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .suggestions-intro p {
+    font-size: 14px;
+  }
+
+  .suggestions-section {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .section-header h3 {
+    font-size: 18px;
+  }
+
+  .section-header p {
+    font-size: 13px;
+  }
+
+  .suggestion-form-wrapper {
+    padding: 20px;
+  }
+
+  .suggestion-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .suggestion-author {
+    width: 100%;
+    text-align: left;
+  }
+
+  .suggestions-display h4 {
+    font-size: 18px;
+  }
+
+  .suggestion-item {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .suggestions-container {
+    margin: 10px auto;
+    padding: 15px 10px;
+  }
+
+  .suggestions-intro {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .suggestions-intro h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .suggestions-intro p {
+    font-size: 13px;
+  }
+
+  .suggestions-section {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .section-header h3 {
+    font-size: 16px;
+  }
+
+  .section-header p {
+    font-size: 12px;
+  }
+
+  .suggestion-form-wrapper {
+    padding: 15px;
+  }
+
+  .form-group {
+    gap: 8px;
+  }
+
+  .submit-btn {
+    padding: 10px 20px;
+  }
+
+  .suggestion-item {
+    padding: 10px;
+  }
+
+  .suggestion-title {
+    font-size: 13px;
+  }
+
+  .suggestion-author {
+    font-size: 11px;
+  }
+
+  .suggestion-text {
+    font-size: 12px;
+  }
+
+  .suggestions-display h4 {
+    font-size: 16px;
+  }
+}

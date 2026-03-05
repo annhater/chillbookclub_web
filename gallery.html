@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="gallery.css" !important>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg" !important>
+    <title>Our Past Meetings</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chewy" />      
+</head>
+<body>
+    <header class='hero'> 
+        <div class="topbar">
+            <a href="index.html" class="logo-link"><img src="images/logo.jpg" alt="Chill Book Club Logo" class="logo"></a>
+            <div class='searchbox'>
+                <input type="search" placeholder="Search...">
+                <button type="submit"> <img src="images/search.png" alt="Search" height="14" width="14"> </button>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+                <svg width="40" height="30" viewBox="0 0 60 30" aria-hidden="true">
+                    <rect x="5" y="3" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="13" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="23" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                </svg>
+            </div>
+        </div>
+        <h1> Past Meetings Gallery </h1>
+    </header>
+
+<section class="container">
+    <div class="slider-wrapper">
+        <div class="slider">
+            <div class="slide-item">
+                <img id="slide-1" src="images/meetings_gallery/img-1.jpg" alt="Our May 2025 meeting (Intermezzo by Sally Rooney discussion)">
+                <div class="caption">Intermezzo by Sally Rooney discussion (May 2025)</div>
+            </div>
+            <div class="slide-item">
+                <img id="slide-2" src="images/meetings_gallery/img-2.jpg" alt="Our May meeting 2">
+                <div class="caption">Our May meeting</div>
+            </div>
+            <div class="slide-item">
+                <img id="slide-3" src="images/meetings_gallery/img-3.jpg" alt="Doughnuts and Intermezzo discussion">
+                <div class="caption">Doughnuts and Intermezzo discussion</div>
+            </div>
+            <div class="slide-item">
+                <img id="slide-4" src="images/meetings_gallery/img-4.jpg" alt="Koran food and Crying in H Mart discussion (August 2025)">
+                <div class="caption">Koran food and Crying in H Mart discussion (August 2025)</div>
+            </div>
+            <div class="slide-item">
+                <img id="slide-5" src="images/meetings_gallery/img-5.jpg" alt="Chinese tea and Vera Wong's unsolicited advice for murderers by Jesse Q.Sutanto">
+                <div class="caption">Chinese tea and Vera Wong's unsolicited advice for murderers by Jesse Q.Sutanto</div>
+            </div>
+            <div class="slide-item">
+                <img id="slide-6" src="images/meetings_gallery/img-6.jpg" alt="Tea time! (October 2025)">
+                <div class="caption">Tea time! (October 2025)</div>
+            </div>
+        </div>
+    <div class="slider-nav">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+        <a href="#slide-4"></a>
+        <a href="#slide-5"></a>
+        <a href="#slide-6"></a>
+    </div>
+    </div>
+</section>
+
+<footer>
+    <p> Website developed by: Perova Anna, the Chill Book Club host </p>
+    <p> All rights reserved. </p>
+</footer>
+
+    <!-- Sidebar + overlay -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <nav>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="message_board.html">Announcements</a></li>
+                <li><a href="book_themes.html"> Book Themes Schedule</a></li>
+                <li><a href="gallery.html">Past Meetings</a></li>
+                <li><a href="read_books.html">Read Books</a></li>
+                <li><a href="polls.html">Polls</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="overlay" class="overlay" hidden></div>
+
+<script src="script.js"></script>
+<script>
+// simple slide navigation: scroll container when nav dot clicked
+(function(){
+    const slider = document.querySelector('.slider');
+    const navLinks = document.querySelectorAll('.slider-nav a');
+    if(slider && navLinks.length) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e){
+                e.preventDefault();
+                const id = this.getAttribute('href').slice(1);
+                const target = document.getElementById(id);
+                if(target) {
+                    slider.scrollTo({left: target.offsetLeft, behavior: 'smooth'});
+                }
+            });
+        });
+    }
+})();
+</script>
+</body>

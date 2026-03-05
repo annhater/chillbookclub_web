@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="suggestions.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <title>Suggestion Box - Chill Book Club</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chewy" />      
+</head>
+<body>
+    <header class='hero'> 
+        <div class="topbar">
+            <a href="index.html" class="logo-link"><img src="images/logo.jpg" alt="Chill Book Club Logo" class="logo"></a>
+            <div class='searchbox'>
+                <input type="search" placeholder="Search...">
+                <button type="submit"> <img src="images/search.png" alt="Search" height="14" width="14"> </button>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+                <svg width="40" height="30" viewBox="0 0 60 30" aria-hidden="true">
+                    <rect x="5" y="3" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="13" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="23" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                </svg>
+            </div>
+        </div>
+        <h1>Suggestion Box</h1>
+    </header>
+
+    <div class="content">
+        <div class="suggestions-container">
+            <!-- Book Themes Section -->
+            <div class="suggestions-section">
+                <div class="section-header">
+                    <h3>📚 Book Theme Suggestions</h3>
+                    <p>Suggest a theme or concept for one of our monthly reading selections</p>
+                </div>
+
+                <div class="suggestion-form-wrapper" id="themesFormWrapper">
+                    <form class="suggestion-form" id="themesSuggestForm">
+                        <div class="form-group">
+                            <label for="themesSuggestion">What theme would you like to explore? *</label>
+                            <input type="text" id="themesSuggestion" name="suggestion" required placeholder="e.g., Mythology, Contemporary Africa, Time Travel, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="themesName">Your Name *</label>
+                            <input type="text" id="themesName" name="name" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="themesComment">Additional Comment (optional)</label>
+                            <textarea id="themesComment" name="comment" placeholder="Why would this theme be interesting? Any thoughts?" maxlength="300"></textarea>
+                            <div class="char-count">
+                                <span id="themesCharCount">0</span>/300 characters
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Theme Suggestion</button>
+                    </form>
+                </div>
+             </div>
+
+        <!-- Books Section -->
+            <div class="suggestions-section">
+                <div class="section-header">
+                    <h3>📖 Book Recommendations</h3>
+                    <p>Recommend a specific book title you'd like the club to read</p>
+                </div>
+
+                <div class="suggestion-form-wrapper" id="booksFormWrapper">
+                    <form class="suggestion-form" id="booksSuggestForm">
+                        <div class="form-group">
+                            <label for="bookTitle">Book Title & Author *</label>
+                            <input type="text" id="bookTitle" name="booktitle" required placeholder="e.g., The Midnight Library by Matt Haig">
+                        </div>
+                        <div class="form-group">
+                            <label for="booksName">Your Name *</label>
+                            <input type="text" id="booksName" name="name" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="booksComment">Why should we read this? (optional)</label>
+                            <textarea id="booksComment" name="comment" placeholder="What makes this book special? Who would enjoy it?" maxlength="300"></textarea>
+                            <div class="char-count">
+                                <span id="booksCharCount">0</span>/300 characters
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Book Recommendation</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+    <footer>
+        <p> Website developed by: Perova Anna, the Chill Book Club host </p>
+        <p> All rights reserved. </p>
+    </footer>
+
+    <!-- Socials Button -->
+    <button class="socials-toggle-btn" id="socialsToggleBtn">👋 Our Socials</button>
+
+    <!-- Socials Modal -->
+    <div class="socials-modal" id="socialsModal">
+        <button class="socials-modal-close" id="socialsModalClose">✕</button>
+        <h2> Our socials </h2>
+        <div class="row social" align="center">
+            <a  href= "https://chat.whatsapp.com/LfcwpVG3Og2DVkN3QR7uVb"> <img src="images/whatsapp.png" alt="WhatsApp" width="15" height="15"></a>
+            <a  href= "https://bookclubs.com/modern-literati/about-our-club"> <img src="images/bookclubs.png" alt="BookClubs" width="15" height="15"></a>
+            <a  href= 'mailto:mail.chillbookclub@gmail.com'> <img src="images/email.png" alt="Email" width="15" height="15"></a>
+        </div>
+    </div>
+
+    <!-- Sidebar + overlay -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <nav>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="message_board.html">Announcements</a></li>
+                <li><a href="book_themes.html">Book Themes Schedule</a></li>
+                <li><a href="gallery.html">Past Meetings</a></li>
+                <li><a href="read_books.html">Read Books</a></li>
+                <li><a href="polls.html">Polls</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="overlay" class="overlay" hidden></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Character counters
+        const themesComment = document.getElementById('themesComment');
+        const themesCharCount = document.getElementById('themesCharCount');
+        const booksComment = document.getElementById('booksComment');
+        const booksCharCount = document.getElementById('booksCharCount');
+
+        if (themesComment) {
+            themesComment.addEventListener('input', function() {
+                themesCharCount.textContent = this.value.length;
+            });
+        }
+
+        if (booksComment) {
+            booksComment.addEventListener('input', function() {
+                booksCharCount.textContent = this.value.length;
+            });
+        }
+
+        // Form submissions
+        const themesForm = document.getElementById('themesSuggestForm');
+        const booksForm = document.getElementById('booksSuggestForm');
+
+        themesForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const suggestion = document.getElementById('themesSuggestion').value;
+            const name = document.getElementById('themesName').value;
+            const comment = document.getElementById('themesComment').value;
+
+            if (suggestion.trim() && name.trim()) {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.className = 'suggestion-item';
+                suggestionItem.innerHTML = `
+                    <div class="suggestion-header">
+                        <span class="suggestion-title">${escapeHtml(suggestion)}</span>
+                        <span class="suggestion-author">- ${escapeHtml(name)}</span>
+                    </div>
+                    ${comment.trim() ? `<p class="suggestion-text">${escapeHtml(comment)}</p>` : ''}
+                `;
+
+                const themesList = document.getElementById('themesList');
+                themesList.insertBefore(suggestionItem, themesList.firstChild);
+
+                themesForm.reset();
+                themesCharCount.textContent = '0';
+            }
+        });
+
+        booksForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const bookTitle = document.getElementById('bookTitle').value;
+            const name = document.getElementById('booksName').value;
+            const comment = document.getElementById('booksComment').value;
+
+            if (bookTitle.trim() && name.trim()) {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.className = 'suggestion-item';
+                suggestionItem.innerHTML = `
+                    <div class="suggestion-header">
+                        <span class="suggestion-title">${escapeHtml(bookTitle)}</span>
+                        <span class="suggestion-author">- ${escapeHtml(name)}</span>
+                    </div>
+                    ${comment.trim() ? `<p class="suggestion-text">${escapeHtml(comment)}</p>` : ''}
+                `;
+
+                const booksList = document.getElementById('booksList');
+                booksList.insertBefore(suggestionItem, booksList.firstChild);
+
+                booksForm.reset();
+                booksCharCount.textContent = '0';
+            }
+        });
+
+        // Helper function to escape HTML
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="questionnaire.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <title>Entrance Questionnaire - Chill Book Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chewy" />
+</head>
+<body>
+    <header class='hero'> 
+        <div class="topbar">
+            <a href="index.html" class="logo-link"><img src="images/logo.jpg" alt="Chill Book Club Logo" class="logo"></a>
+            <div class='searchbox'>
+                <input type="search" placeholder="Search...">
+                <button type="submit"> <img src="images/search.png" alt="Search" height="14" width="14"> </button>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+                <svg width="40" height="30" viewBox="0 0 60 30" aria-hidden="true">
+                    <rect x="5" y="3" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="13" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="23" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                </svg>
+            </div>
+        </div>
+        <h1> Entrance Questionnaire </h1>
+    </header>
+
+    <div class='content'>
+        <div class="questionnaire-container">
+            <form id="entranceForm" class="questionnaire-form">
+                
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">What's your name? *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>What's your gender? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female" required>
+                            <span>Female</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" required>
+                            <span>Male</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="non-binary" required>
+                            <span>Non-binary</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="prefer-not-to-say" required>
+                            <span>Prefer not to say</span>
+                        </label>
+                    </div>
+                    <span class="error-message" id="genderError"></span>
+                </div>
+
+                <!-- Preferred Pronouns -->
+                <div class="form-group">
+                    <label>What are your preferred pronouns? (select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="pronouns" value="he/him">
+                            <span>He/Him</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="pronouns" value="she/her">
+                            <span>She/Her</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="pronouns" value="they/them">
+                            <span>They/Them</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="pronouns" value="other">
+                            <span>Other</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- How did you hear about us -->
+                <div class="form-group">
+                    <label for="source">How did you hear about the Chill Book Club? *</label>
+                    <select id="source" name="source" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="friend">Friend or Family</option>
+                        <option value="social-media">Social Media</option>
+                        <option value="bookclubs-website">BookClubs.com</option>
+                        <option value="google-search">Google Search</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-message" id="sourceError"></span>
+                </div>
+
+                <!-- City -->
+                <div class="form-group">
+                    <label for="city">What city do you live in? *</label>
+                    <input type="text" id="city" name="city" required placeholder="Enter your city">
+                    <span class="error-message" id="cityError"></span>
+                </div>
+
+                <!-- Books per year -->
+                <div class="form-group">
+                    <label for="booksPerYear">How many books do you read per year? *</label>
+                    <div class="slider-container">
+                        <input type="range" id="booksPerYear" name="booksPerYear" min="0" max="50" value="0" required>
+                        <div class="slider-labels">
+                            <span class="slider-value" id="booksValue">0</span> books per year
+                        </div>
+                    </div>
+                    <span class="error-message" id="booksError"></span>
+                </div>
+
+                <!-- Languages -->
+                <div class="form-group">
+                    <label>In what language(s) do you/can you read? (select all that apply) *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="English">
+                            <span>English</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="French">
+                            <span>French</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="Spanish">
+                            <span>Spanish</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="German">
+                            <span>German</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="Italian">
+                            <span>Italian</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="Chinese">
+                            <span>Chinese</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="Russian">
+                            <span>Russian</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="other">
+                            <span>Other</span>
+                        </label>
+                    </div>
+                    <span class="error-message" id="languagesError"></span>
+                </div>
+
+                <!-- Expectations -->
+                <div class="form-group">
+                    <label for="expectations">What are your expectations for the book club? *</label>
+                    <textarea id="expectations" name="expectations" required placeholder="Tell us what you hope to get out of this experience..." maxlength="300"></textarea>
+                    <div class="char-count">
+                        <span id="expectationsCount">0</span>/300 characters
+                    </div>
+                    <span class="error-message" id="expectationsError"></span>
+                </div>
+
+                <!-- About yourself -->
+                <div class="form-group">
+                    <label for="about">Tell us about yourself! Your story, the last book you liked, or anything else you'd like us to know *</label>
+                    <textarea id="about" name="about" required placeholder="Share your story, mention your favorite recent book, or tell us anything you think we should know..." maxlength="1000"></textarea>
+                    <div class="char-count">
+                        <span id="aboutCount">0</span>/1000 characters
+                    </div>
+                    <span class="error-message" id="aboutError"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit Questionnaire</button>
+                    <a href="index.html" class="cancel-btn">Cancel</a>
+                </div>
+
+            </form>
+
+            <!-- Success message (shown after submission) -->
+            <div id="successMessage" class="success-message" style="display: none;">
+                <p>Thank you for filling out the questionnaire! We'll be in touch soon.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> Website developed by: Perova Anna, the Chill Book Club host </p>
+        <p> All rights reserved. </p>
+    </footer>
+
+    <!-- Sidebar + overlay -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <nav>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="message_board.html">Announcements</a></li>
+                <li><a href="book_themes.html"> Book Themes Schedule</a></li>
+                <li><a href="gallery.html">Past Meetings</a></li>
+                <li><a href="read_books.html">Read Books</a></li>
+                <li><a href="polls.html">Polls</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="overlay" class="overlay" hidden></div>
+
+    <script src="script.js"></script>
+    <script src="questionnaire.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="polls.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <title>Polls - Chill Book Club</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chewy" />
+</head>
+<body>
+    <header class='hero'>
+        <div class="topbar">
+            <a href="index.html" class="logo-link"><img src="images/logo.jpg" alt="Chill Book Club Logo" class="logo"></a>
+            <div class='searchbox'>
+                <input type="search" placeholder="Search...">
+                <button type="submit"> <img src="images/search.png" alt="Search" height="14" width="14"> </button>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+                <svg width="40" height="30" viewBox="0 0 60 30" aria-hidden="true">
+                    <rect x="5" y="3" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="13" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="23" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                </svg>
+            </div>
+        </div>
+        <h1>Club Polls</h1>
+    </header>
+
+    <div class="content">
+        <div class="polls-container">
+            <!-- Meeting Dates Poll -->
+            <div class="poll-section">
+                <div class="section-header">
+                    <h3>📅 February Meeting Date Preferences</h3>
+                    <p>Vote for your preferred meeting day and time</p>
+                </div>
+
+                <form class="poll-form" id="meetingPollForm">
+                    <p class="poll-instruction">Select all times that work for you:</p>
+                    <div class="poll-options">
+                        <div class="option">
+                            <input type="checkbox" id="meeting1" name="meeting" value="Sunday, March 1 2026 at 5:00 PM">
+                            <label for="meeting1">Sunday, March 1 2026 at 5:00 PM</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="meeting2" name="meeting" value="Tuesday, March 3 2026 at 7:00 PM">
+                            <label for="meeting2">Tuesday, March 3 2026 at 7:00 PM</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="meeting3" name="meeting" value="Friday, March 6 2026 at 7:00 PM">
+                            <label for="meeting3">Friday, March 6 2026 at 7:00 PM</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="meeting4" name="meeting" value="Wednesday, March 4 2026 at 7:00 PM">
+                            <label for="meeting4">Wednesday, March 4 2026 at 7:00 PM</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="meeting5" name="meeting" value="Saturday, March 7 2026 at 12:00 PM">
+                            <label for="meeting5">Saturday, March 7 2026 at 12:00 PM</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="meeting6" name="meeting" value="Saturday, March 7 2026 at 5:00 PM">
+                            <label for="meeting6">Saturday, March 7 2026 at 5:00 PM</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="meeting7" name="meeting" value="Sunday, March 8 2026 at 12:00 PM">
+                            <label for="meeting7">Sunday, March 8 2026 at 12:00 PM</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="meeting8" name="meeting" value="Wednesday, March 4 2026 at 6:00 PM">
+                            <label for="meeting8">Wednesday, March 4 2026 at 6:00 PM</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="poll-submit">Submit My Preferences</button>
+                </form>
+            </div>
+
+            <!-- Book Choices Poll -->
+            <div class="poll-section">
+                <div class="section-header">
+                    <h3> MARCH PICK: BOOK TO SCREEN ADAPTATION 🎬🍿"</h3>
+                    <p> Vote for the our next read</p>
+                </div>
+
+                <form class="poll-form" id="bookPollForm">
+                    <div class="poll-options">
+                        <div class="option">
+                            <input type="radio" id="book1" name="book" value="Hamnet by Maggie O'Farrell">
+                            <label for="book1">Hamnet by Maggie O'Farrell 🌲🎭</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="book2" name="book" value="Call me by your name by André Asiman">
+                            <label for="book2">Call me by your name by André Asiman 🍑🍝</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="book3" name="book" value="Project Hail Mary by Andy Weir">
+                            <label for="book3">Project Hail Mary by Andy Weir 👨‍🚀🚀</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="poll-submit">Vote for Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> Website developed by: Perova Anna, the Chill Book Club host </p>
+        <p> All rights reserved. </p>
+    </footer>
+
+    <!-- Socials Button -->
+    <button class="socials-toggle-btn" id="socialsToggleBtn">👋 Our Socials</button>
+
+    <!-- Socials Modal -->
+    <div class="socials-modal" id="socialsModal">
+        <button class="socials-modal-close" id="socialsModalClose">✕</button>
+        <h2> Our socials </h2>
+        <div class="row social" align="center">
+            <a  href= "https://chat.whatsapp.com/LfcwpVG3Og2DVkN3QR7uVb"> <img src="images/whatsapp.png" alt="WhatsApp" width="15" height="15"></a>
+            <a  href= "https://bookclubs.com/modern-literati/about-our-club"> <img src="images/bookclubs.png" alt="BookClubs" width="15" height="15"></a>
+            <a  href= 'mailto:mail.chillbookclub@gmail.com'> <img src="images/email.png" alt="Email" width="15" height="15"></a>
+        </div>
+    </div>
+
+    <!-- Sidebar + overlay -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <nav>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="message_board.html">Announcements</a></li>
+                <li><a href="book_themes.html">Book Themes Schedule</a></li>
+                <li><a href="gallery.html">Past Meetings</a></li>
+                <li><a href="read_books.html">Read Books</a></li>
+                <li><a href="polls.html">Polls</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="overlay" class="overlay" hidden></div>
+
+    <script src="script.js"></script>
+    <script src="polls.js"></script>
+</body>
+</html>
