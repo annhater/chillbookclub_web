@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="message_board.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <title>Club Announcements - Chill Book Club</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chewy" />      
+</head>
+<body>
+    <header class='hero'> 
+        <div class="topbar">
+            <a href="index.html" class="logo-link"><img src="images/logo.jpg" alt="Chill Book Club Logo" class="logo"></a>
+            <div class='searchbox'>
+                <input type="search" placeholder="Search...">
+                <button type="submit"> <img src="images/search.png" alt="Search" height="14" width="14"> </button>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+                <svg width="40" height="30" viewBox="0 0 60 30" aria-hidden="true">
+                    <rect x="5" y="3" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="13" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    <rect x="5" y="23" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                </svg>
+            </div>
+        </div>
+        <h1>Club Announcements</h1>
+    </header>
+
+    <div class="content">
+        <div class="blog-container">
+            <div class="blog-intro">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Filter by Type:</label>
+                        <select id="categoryFilter">
+                            <option value="all">All Announcements</option>
+                            <option value="book">📖 Book Announcement</option>
+                            <option value="meeting">📅 Meeting Info</option>
+                            <option value="general">General</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="monthFilter">Filter by Month:</label>
+                        <select id="monthFilter">
+                            <option value="all">All Months</option>
+                            <option value="march">March 2026</option>
+                            <option value="december">December 2025</option>
+                            <option value="october">October/November 2025</option>
+                            <option value="june">June 2025</option>
+                            <option value="may">May 2025</option>
+                            <option value="april">April 2025</option>
+                            <option value="february">February 2025</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Posts -->
+            <div class="blog-posts" id="blogPosts">
+                
+
+                <article class="blog-post" data-category="general" data-month="december">
+                    <div class="post-header">
+                        <h3 class="post-title">🕊️ End of Year Message & 2026 Schedule</h3>
+                        <span class="post-date">December 2025</span>
+                    </div>
+                    <img src="images/announcements/end_of_year_post.png" alt="End of Year Message" class="post-image">
+                    <div class="post-content">
+                        <p>Hello chill people! 2025 comes to its end - it wasn't perfect, but it was fun nonetheless. We had our first meeting as a bookclub back in February, and since then, new faces have joined us in our reading journey. My hope for next year is that our bookclub will continue to grow...</p>
+                        <p>Of course, still being a comforting place for all members, safe to discuss everything from politics to childhood memories. I hope that next year will bring a lot of nice reads and great discussions.</p>
+                        <p>I have made the schedule for 2026 with some of your suggestions. There will be no pre-chosen books this time - full democracy, at last! So, please do be active in your book suggestions and voting!</p>
+                        <p>Have a lovely New Years celebration and hope to see you all very soon! 🕊️💞🫶📚</p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="book" data-month="december">
+                    <div class="post-header">
+                        <h3 class="post-title">❄️ December Book Pick: Things We Lost in the Fire</h3>
+                        <span class="post-category">📖 Book Announcement</span>
+                        <span class="post-date">December 2025</span>
+                    </div>
+                    <img src="images/announcements/december_post.jpeg" alt="Things We Lost in the Fire" class="post-image">
+                    <div class="post-content">
+                        <p><strong>Things We Lost in the Fire by Mariana Enriquez</strong></p>
+                        <p>Ho-ho-ho chill people! According to our poll, the dark nights of Parisian winter can only be saved by an even more dark and haunting book!</p>
+                        <p>This book explores all sorts of things, from life and death to black magic, superstitions, lost loves and regrets, but there is also friendship, compassion, and humor.</p>
+                        <p>For December, I suggest we read all the 12 stories for each day (starting from 1st and ending with 12th, or from 19th to 31st - you decide). Of course, if you prefer to read it all in one sitting, that's fine too!</p>
+                        <p>This counts to our global literature challenge as a book from Argentina. Read it in original Spanish (Las cosas que perdimos en el fuego) or in the National Book Award-winning translation by Megan McDowell!</p>
+                        <p>All the love and have a merry festive season! 🎅🕊️❤️‍🔥</p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="book" data-month="october">
+                    <div class="post-header">
+                        <h3 class="post-title">🎅 DECEMBER CHILL BOOKCLUB SUGGESTIONS ARE NOW OPEN 📚</h3>
+                        <span class="post-category"> Book Suggestions</span>
+                        <span class="post-date">October 2025</span>
+                    </div>
+                    <img src="images/announcements/december_post_1.jpeg" alt="Advent book" class="post-image">
+                    <div class="post-content">
+                        <p>Ho-ho-ho chill people!</p>
+                        <p>Festive season is just around the corner, and so, in order to get ready in time, we open our suggestion box for advent short-story collection and the deciding poll a bit sooner this month.</p>
+                        <p>The rules for our December pick: we need to find a book, a short story collection, with some amount of short stories that we will read every single day of December, like an advent calendar.</p>
+                        <p>Of course rules are bendy, if you want to read it all in one, you can! I suppose it will be hard finding a collection of exactly 24 short stories, but I suppose anything between 5 and 15 is alright!</p>
+                        <p>It doesn't have to be winter- or Christmas - themed, but it's cool if it is! Can't wait to see your suggestions! ☃️ 🎁 🎄 📚 </p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="book" data-month="october">
+                    <div class="post-header">
+                        <h3 class="post-title">🫖 October/November Pick: Vera Wong's Unsolicited Advice for Murderers</h3>
+                        <span class="post-category">📖 Book Announcement</span>
+                        <span class="post-date">October 2025</span>
+                    </div>
+                    <img src="images/announcements/october_post.jpg" alt="Vera Wong's Unsolicited Advice for Murderers" class="post-image">
+                    <div class="post-content">
+                        <p><strong>Vera Wong's Unsolicited Advice for Murderers by Jesse Q. Sutanto</strong></p>
+                        <p>Hello chill people! The last poll resulted in a tie, and my vote was deciding - so our next book will be Vera Wong's Unsolicited Advice for Murderers (it had better reviews)!</p>
+                        <p>So, get ready for another tea shop (you know I love a tea shop), a good pinch of humour and, of course, solving mystery!</p>
+                        <p>Vera is routine-oriented, meticulous, and full of judgments about the younger generation. She owns a tea shop and spends her days sleuthing—that is, until she stumbles upon a dead body in her tea shop one morning.</p>
+                        <p>Hope everyone enjoys this cosy read! 🫖👵📚🔍</p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="book" data-month="october">
+                    <div class="post-header">
+                        <h3 class="post-title">OCT/NOV CHILL BOOKCLUB SUGGESTIONS ARE NOW OPEN </h3>
+                        <span class="post-category"> Book Suggestions</span>
+                        <span class="post-date">October 2025</span>
+                    </div>                
+                    <img src="images/announcements/october_post_1.gif" alt="Spooky forest detective" class="post-image">
+                    <div class="post-content">
+                        <p>Boo! dear chill people,</p>
+                        <p>We are now in the midst of spooky, chilly, mysterious season. And we have to have a proper suiting book on us.</p>
+                        <p>heck out my suggestions for a book pick, and please do suggest other books in "Books we want to read" section. We will choose it very soon! </p>
+                        <p>Of course rules are bendy, if you want to read it all in one, you can! I suppose it will be hard finding a collection of exactly 24 short stories, but I suppose anything between 5 and 15 is alright!</p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="book" data-month="june">
+                    <div class="post-header">
+                        <h3 class="post-title">☀️ July Book Pick: Crying in H Mart</h3>
+                        <span class="post-category">📖 Book Announcement</span>
+                        <span class="post-date">June 2025</span>
+                    </div>
+                    <img src="images/announcements/summer_post.jpeg" alt="Crying in H Mart" class="post-image">
+                    <div class="post-content">
+                        <p><strong>Crying in H Mart by Michelle Zauner</strong></p>
+                        <p>Hello chill people! This hot nonfiction summer we will be reading and discussing Crying in H Mart by Michelle Zauner. It's an intimate memoir in which the indie singer explores her relationship with her mother, her Korean American heritage, her emotional connection with food, and forging her own identity in the aftermath of immense loss.</p>
+                        <p>Can't wait to eat Korean food with you during our discussion of this one! 😋</p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="book" data-month="may">
+                    <div class="post-header">
+                        <h3 class="post-title">♟️ May Book Pick: Intermezzo by Sally Rooney</h3>
+                        <span class="post-category">📖 Book Announcement</span>
+                        <span class="post-date">May 2025</span>
+                    </div>
+                    <img src="images/announcements/may_post.jpg" alt="Intermezzo by Sally Rooney" class="post-image">
+                    <div class="post-content">
+                        <p><strong>Intermezzo by Sally Rooney</strong></p>
+                        <p>Hello, chill people! Are you ready to tackle last year's bestseller by global literature star Sally Rooney? It's described as "a moving story about grief, love, and family—but especially love", with elements of chess, pop-culture and commentary on modern politics and society.</p>
+                        <p>For two grieving brothers and the people they love, this is a new interlude—a period of desire, despair, and possibility; a chance to find out how much one life might hold inside itself without breaking.</p>
+                        <p>Happy reading and check, mate! ♟️ ♥️</p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="meeting" data-month="may">
+                    <div class="post-header">
+                        <h3 class="post-title">MARCH CHILL BOOK CLUB MEETING DATE</h3>
+                        <span class="post-category"> Meeting Details </span>
+                        <span class="post-date">May 2025</span>
+                    </div>
+                    <img src="images/announcements/march_post_1.jpeg" alt="Tamil bikers" class="post-image">
+                    <div class="post-content">
+                        <p>வணக்கம் குளிர் மக்கள் (Vaṇakkam Kuḷir Makkaḷ)! Or, Hello chill people! (well, I hope, I don't speak Tamil) 🌞</p>
+                        <p>Here to announce everyone that the date for our March bookclub has been decided: Tuesday 15th of April at 7pm ! We will be discussing this book at our new place! </p>
+                        <p>And I suggest we order something thematic - Sri Lankan food 🍲! What do you say?</p>
+                        <p>Anyone who has read the book or wants to join just to see the new appartement is welcome! More details later Love and peace 🕊️ </p>
+                        <p>P. S. according to our poll there is also an alternative date Thursday 17th at 7pm, if anyone needs to reschedule </p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="book" data-month="april">
+                    <div class="post-header">
+                        <h3 class="post-title">🌷 April Book Pick: The Psalm of the Wild-Built</h3>
+                        <span class="post-category">📖 Book Announcement</span>
+                        <span class="post-date">April 2025</span>
+                    </div>
+                    <img src="images/announcements/april_post.jpeg" alt="The Psalm of the Wild-Built" class="post-image">
+                    <div class="post-content">
+                        <p><strong>The Psalm of the Wild-Built by Becky Chambers</strong></p>
+                        <p>🌷🌸 Spring! What a time to just exist! It is time for reflection, growth, enjoying the nature and tastes that spring brings.</p>
+                        <p>Tag along with us to read The Psalm of the Wild-Built—first book in her delightful Monk and Robot series, that will give you much hope for the future.</p>
+                        <p>So, let us have some tea, go outside, bring this book and marvel at the world around us. 🌅 🥰</p>
+                    </div>
+                </article>
+                <article class="blog-post featured" data-category="meeting" data-month="may">
+                    <div class="post-header">
+                        <h3 class="post-title">MARCH CHILL BOOK CLUB MEETING DATE</h3>
+                        <span class="post-category"> Meeting Details </span>
+                        <span class="post-date">May 2025</span>
+                    </div>
+                    <img src="images/announcements/february_post_2.jpeg" alt="Tamil bikers" class="post-image">
+                    <div class="post-content">
+                        <p>🥰 Hello, chill friends! Ready for some book discussions??? Little reminder that our meeting is tomorrow at 7pm. Arriving earlier or later is totally allowed </p>
+                        <p> I will make some pancakes, and you're welcome to bring your favorite condiments, jams or toppings, but I have some at my place.</p>
+                        <p>See you soon! ❤️‍🔥📚</p>
+                    </div>
+                </article>
+                <article class="blog-post featured" data-category="book" data-month="march">
+                    <div class="post-header">
+                        <h3 class="post-title">📚 March Book Pick: Brotherless Night</h3>
+                        <span class="post-category">📖 Book Announcement</span>
+                        <span class="post-date">March 2025</span>
+                    </div>
+                    <img src="images/announcements/march_post_2.png" alt="Brotherless Night" class="post-image">
+                    <div class="post-content">
+                        <p><strong>Brotherless Night by Akwaeke Emezi</strong></p>
+                        <p>🥰 Hello, chill people! 📚 It's March, and in March we are celebrating women -- the strong, the wonderful, the full of life and love and tragedy.</p>
+                        <p>Brotherless Night is a ''heartrending portrait of one woman's moral journey and a testament to both the enduring impact of war and the bonds of home'', set during the early years of Sri Lanka's three-decade civil war. This book is 2024 Women's Prize for Fiction winner!</p>
+                        <p>Sixteen-year-old Sashi wants to become a doctor. But over the next decade, as a vicious civil war tears through her hometown of Jaffna, her dream takes her on a different path. Hope you enjoy the read and we will have a lot to discuss! 🕊️</p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="book" data-month="october">
+                    <div class="post-header">
+                        <h3 class="post-title">SUGGESTIONS FOR MARCH PICK ARE NOW OPEN! CATEGORY IS: WOMEN'S PRIZE FOR FICTION♀️✊ 💅📚 </h3>
+                        <span class="post-category"> Book Suggestions</span>
+                        <span class="post-date">February 2025</span>
+                    </div>                
+                    <img src="images/announcements/march_post.png" alt="Women's Prize for Fiction" class="post-image">
+                    <div class="post-content">
+                        <p>Hello, chill club!</p>
+                        <p>March is a-coming! And as you know March is an International Women's Month.</p>
+                        <p>One of the most prestigious prizes for English-language fiction is of course "Women's Prize for Fiction", and for this reason I suggest that this month we read one of its winners or short-listed books. </p>
+                        <p>In 2025 the prize celebrates it's 30th anniversary, so let's join them in this occasion by reading and discussing the striking creativity of these women! You can suggest to our "Books we want to read" until 1st of March 🤩 The list of winners is down below, to give you some ideas, but if nothing catches your eye, you can suggest one of the short-listed books on their <a href="https://womensprize.com/library" target="_blank">website</a></p>
+                    </div>
+                </article>
+
+                <article class="blog-post featured" data-category="book" data-month="february">
+                    <div class="post-header">
+                        <h3 class="post-title">🎮 February Read: Tomorrow and Tomorrow and Tomorrow</h3>
+                        <span class="post-category">📖 Book Announcement</span>
+                        <span class="post-date">February 2025</span>
+                    </div>
+                    <img src="images/announcements/february_post.jpeg" alt="Tomorrow, and Tomorrow, and Tomorrow" class="post-image">
+                    <div class="post-content">
+                        <p><strong>Tomorrow and Tomorrow and Tomorrow by Gabrielle Zevin</strong></p>
+                        <p>This month we'll be reading a best-selling novel full of love, games and 90s references! The novel follows the relationship between two friends who begin a successful video game company together. It's a unique exploration of friendship, love, loss and self-discovery.</p>
+                        <p>It was a big hit in 2022, even acclaimed by Bill Gates! Happy reading! 📖 🥰</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> Website developed by: Perova Anna, the Chill Book Club host </p>
+        <p> All rights reserved. </p>
+    </footer>
+
+    <!-- Socials Button -->
+    <button class="socials-toggle-btn" id="socialsToggleBtn">👋 Our Socials</button>
+
+    <!-- Socials Modal -->
+    <div class="socials-modal" id="socialsModal">
+        <button class="socials-modal-close" id="socialsModalClose">✕</button>
+        <h2> Our socials </h2>
+        <div class="row social" align="center">
+            <a  href= "https://chat.whatsapp.com/LfcwpVG3Og2DVkN3QR7uVb"> <img src="images/whatsapp.png" alt="WhatsApp" width="15" height="15"></a>
+            <a  href= "https://bookclubs.com/modern-literati/about-our-club"> <img src="images/bookclubs.png" alt="BookClubs" width="15" height="15"></a>
+            <a  href= 'mailto:mail.chillbookclub@gmail.com'> <img src="images/email.png" alt="Email" width="15" height="15"></a>
+        </div>
+    </div>
+
+    <!-- Sidebar + overlay -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <nav>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="message_board.html">Announcements</a></li>
+                <li><a href="book_themes.html"> Book Themes Schedule</a></li>
+                <li><a href="gallery.html">Past Meetings</a></li>
+                <li><a href="read_books.html">Read Books</a></li>
+                <li><a href="polls.html">Polls</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="overlay" class="overlay" hidden></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Filter functionality for announcements
+        const categoryFilter = document.getElementById('categoryFilter');
+        const monthFilter = document.getElementById('monthFilter');
+        const blogPosts = document.querySelectorAll('.blog-post');
+
+        function applyFilters() {
+            const selectedCategory = categoryFilter.value;
+            const selectedMonth = monthFilter.value;
+
+            blogPosts.forEach(post => {
+                const postCategory = post.getAttribute('data-category');
+                const postMonth = post.getAttribute('data-month');
+
+                // Check if post matches selected filters
+                const categoryMatch = selectedCategory === 'all' || postCategory === selectedCategory;
+                const monthMatch = selectedMonth === 'all' || postMonth === selectedMonth;
+
+                // Show post only if both filters match
+                if (categoryMatch && monthMatch) {
+                    post.classList.remove('hidden');
+                } else {
+                    post.classList.add('hidden');
+                }
+            });
+        }
+
+        // Add event listeners to filters
+        categoryFilter.addEventListener('change', applyFilters);
+        monthFilter.addEventListener('change', applyFilters);
+
+        // Initialize filters on page load
+        applyFilters();
+    </script>
+</body>
+</html>

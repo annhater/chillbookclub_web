@@ -1,0 +1,85 @@
+<!DOCTYPE html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chewy" />      
+    <title> Chill Book Club </title>
+</head>
+<body>
+    <header class='hero'> 
+            <div class="topbar">
+                <a href="#" class="logo-link"><img src="images/logo.jpg" alt="Chill Book Club Logo" class="logo"></a>
+                <div class='searchbox'>
+                    <input type="search" placeholder="Search...">
+                    <button type="submit"> <img src="images/search.png" alt="Search" height="14" width="14"> </button>
+                </div>
+                <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+                    <svg width="40" height="30" viewBox="0 0 60 30" aria-hidden="true">
+                        <rect x="5" y="3" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                        <rect x="5" y="13" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                        <rect x="5" y="23" rx="2" ry="2" width="50" height="4" style="fill:#2a0a5e;" />
+                    </svg>
+                </div>
+            </div>
+    <h1> Chill Book Club </h1>
+    </header>
+    <div class='content'>     
+        <img src="images/main_intro_girl.png" alt="Girl reading" class="feature-img">
+        <div class ="content-text">
+            <h1> Hello! </h1> 
+            <p> We are chill book club. It's chill here.</p>
+            <p> You just grab a book that we choose (almost) every month, sit back, relax, forget about the noise around you, about work, about everything that stresses you. </p>
+            <p> When you're finished (or not), you can join our monthly discussions, mostly online, so it's more convenient. We are English speaking-club, but language barriers here are bent like it's a sport ;) </p>
+            <p> We're not specific to any genre, on the contrary, we want to diversify our bookshelves, by reading from different countries, in translation or in original (if you can!), from diverse authors, both classics and contemporary. Although, we do have a big love for modern literature by women... so there will be a lot of that.</p>
+            <p> So, let our journey begin!</p>
+            <p class = "tags"> #In_person #Paris #Everyone_is_welcome #English-speaking </p>
+        </div>
+    </div>
+
+    <div class='contact'>
+        <h2> Join us </h2>
+        <div class='contact-content'>
+            <p> <a href='questionnaire.html'> Fill out the entrance questionnaire </a> </p>
+        </div>
+    </div>
+
+    <footer>
+        <p> Website developed by: Perova Anna, the Chill Book Club host </p>
+        <p> All rights reserved. </p>
+    </footer>
+
+
+    <button class="socials-toggle-btn" id="socialsToggleBtn">👋 Our Socials</button>
+
+    <div class="socials-modal" id="socialsModal">
+        <button class="socials-modal-close" id="socialsModalClose">✕</button>
+        <h2> Our socials </h2>
+        <div class="row social" align="center">
+            <a  href= "https://chat.whatsapp.com/LfcwpVG3Og2DVkN3QR7uVb"> <img src="images/whatsapp.png" alt="WhatsApp" width="15" height="15"></a>
+            <a  href= "https://bookclubs.com/modern-literati/about-our-club"> <img src="images/bookclubs.png" alt="WhatsApp" width="15" height="15"></a>
+            <a  href= 'mailto:mail.chillbookclub@gmail.com'> <img src="images/email.png" alt="WhatsApp" width="15" height="15"></a>
+        </div>
+    </div>
+
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <nav>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="message_board.html">Announcements</a></li>
+                <li><a href="book_themes.html"> Book Themes Schedule</a></li>
+                <li><a href="gallery.html">Past Meetings</a></li>
+                <li><a href="read_books.html">Read Books</a></li>
+                <li><a href="polls.html">Polls</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="overlay" class="overlay" hidden></div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
