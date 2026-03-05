@@ -31,6 +31,7 @@ body {
     text-decoration: none;
 }
 
+a:link { color:#2a0a5e !important;}
 a:visited { color:#2a0a5e !important;}
 a:active { color:#e87341 !important;}
 
@@ -373,7 +374,14 @@ h2 {
 @media (max-width:480px){
   header h1{ font-size:28px; padding:10px 0; }
   .content{ padding:15px; margin:10px auto; }
-  body{ padding-top: 110px; }
+  body{ padding-top: 110px; padding-bottom: 110px;}
+  footer {font-size: 0.5rem;}
+  .socials-toggle-btn {
+      position:relative;
+      max-width: 100%;
+      padding: 2rem;
+      margin-bottom: 4rem;
+  }
 }
 
 @media (max-width:720px){
@@ -464,8 +472,8 @@ footer {
 .socials-toggle-btn{
   display: flex;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 7.7%;
+  left: 77%;
   background: linear-gradient(135deg, #e87341, #fac4a7);
   color: #2a0a5e;
   border: 2px solid #2a0a5e;
