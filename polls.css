@@ -4,6 +4,9 @@ label {
     margin:0 !important;
 }
 
+input {
+    margin: 1rem !important;
+}
 .polls-container {
   max-width: 800px;
   margin: 0 auto;
