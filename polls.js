@@ -5,12 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const meetingPollForm = document.getElementById('meetingPollForm');
     if (meetingPollForm) {
         meetingPollForm.addEventListener('submit', function(e) {
-            e.preventDefault();
             const selected = document.querySelectorAll('input[name="meeting"]:checked');
             if (selected.length > 0) {
                 const selections = Array.from(selected).map(el => el.value);
                 alert(`Thank you for voting! You selected ${selections.length} time(s):\n\n${selections.join('\n')}`);
-                // In a real app, you'd send this to a server
                 console.log('Meeting preferences:', selections);
                 meetingPollForm.reset();
             } else {
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const bookPollForm = document.getElementById('bookPollForm');
     if (bookPollForm) {
         bookPollForm.addEventListener('submit', function(e) {
-            e.preventDefault();
             const selected = document.querySelector('input[name="book"]:checked');
             if (selected) {
                 alert(`Thank you for voting! You selected: ${selected.value}`);
