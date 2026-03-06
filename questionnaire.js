@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form submission
     form.addEventListener('submit', function(e) {
-        e.preventDefault();
         
         // Clear previous errors
         clearErrorMessages();
@@ -206,3 +205,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
