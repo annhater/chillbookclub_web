@@ -204,7 +204,7 @@ label {
 input {
     padding: 10px;
     box-sizing: border-box;
-    margin: 1.2rem 0;
+    margin: 1.2rem;
 }
 
 /* Styling specific input types  */
