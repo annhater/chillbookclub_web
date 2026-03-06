@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form submission
     form.addEventListener('submit', function(e) {
+        e.preventDefault();
         
         // Clear previous errors
         clearErrorMessages();
@@ -47,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Collect form data
             const formData = collectFormData();
             
-            // Log form data (in a real scenario, you'd send this to a server)
-            console.log('Form submitted with data:', formData);
+            // Send to Formspree
+            submitForm('https://formspree.io/f/maqpyqwy', formData);
             
             // Show success message
             showSuccessMessage();
@@ -83,6 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const genderChecked = document.querySelector('input[name="gender"]:checked');
         if (!genderChecked) {
             showError('gender', 'Please select your gender');
+            isValid = false;
+        }
+
+        // Validate age
+        const ageInput = document.getElementById('age');
+        if (!ageInput.value || ageInput.value < 13 || ageInput.value > 120) {
+            showError('age', 'Please enter a valid age between 13 and 120');
             isValid = false;
         }
 
@@ -147,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return {
             name: document.getElementById('name').value,
             gender: document.querySelector('input[name="gender"]:checked').value,
+            age: document.getElementById('age').value,
             preferredPronouns: pronounsChecked.length > 0 ? pronounsChecked : 'Not specified',
             howHeardAbout: document.getElementById('source').value,
             city: document.getElementById('city').value,
@@ -156,6 +165,24 @@ document.addEventListener('DOMContentLoaded', function() {
             about: document.getElementById('about').value,
             submittedAt: new Date().toLocaleString()
         };
+    }
+
+    function submitForm(url, data) {
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                console.error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     }
 
     function showError(fieldName, message) {
